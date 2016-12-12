@@ -46,7 +46,7 @@ class Index extends Component {
           <link rel="mask-icon" href="https://cdn.zeit.co/favicon/safari-pinned-tab.svg" color="#ffffff"/>
           <link rel="shortcut icon" href="https://cdn.zeit.co/favicon/favicon.ico"/>
           <meta name="theme-color" content="#000"/>
-          <title>▲ZEIT Deployments</title>
+          <title>ZEIT Deployments</title>
         </Head>
         <h1 className={css(styles.title)}>My ▲ZEIT Deployments</h1>
         <ol className={css(styles.list)}>
