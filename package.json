@@ -1,0 +1,19 @@
+{
+  "name": "zeit-deployments",
+  "version": "1.0.0",
+  "description": "View all my deployments on Zeit",
+  "main": "index.js",
+  "author": "Pranay Prakash <pranay.gp@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "es6-promise": "^4.0.5",
+    "isomorphic-fetch": "^2.2.1",
+    "moment": "^2.17.1",
+    "next": "^1.2.3"
+  },
+  "scripts": {
+    "build": "next build",
+    "start": "next start",
+    "dev": "next"
+  }
+}
