@@ -1,8 +1,8 @@
 {
   "name": "zeit-deployments",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "View all my deployments on Zeit",
-  "main": "index.js",
+  "main": "",
   "author": "Pranay Prakash <pranay.gp@gmail.com>",
   "license": "MIT",
   "dependencies": {
