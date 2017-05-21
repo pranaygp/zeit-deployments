@@ -17,4 +17,4 @@ Click this button :)
 
 [![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/pranaygp/zeit-deployments&env=NOW_API_KEY)
 
-Note: This project uses your API TOKEN to receive the list of all deployments from ▲ZEIT. That;s what makes this so easy :)  
+Note: This project uses your API TOKEN to receive the list of all deployments from ▲ZEIT. That's what makes this so easy :)  
