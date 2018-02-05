@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
-import css from 'next/css';
 import moment from 'moment';
 
 require('es6-promise').polyfill();
@@ -25,7 +24,7 @@ class Index extends Component {
 
   render() {
     return (
-      <div className={css(styles.container)}>
+      <div className="container">
         <Head>
           <meta name='viewport' content='width=device-width, initial-scale=1'></meta>
           <meta name="og:image" content="https://cdn.zeit.co/zeit/twitter-card.png"/>
@@ -48,48 +47,49 @@ class Index extends Component {
           <meta name="theme-color" content="#000"/>
           <title>ZEIT Deployments</title>
         </Head>
-        <h1 className={css(styles.title)}>My ▲ZEIT Deployments</h1>
-        <ol className={css(styles.list)}>
+        <h1 className="title">My ▲ZEIT Deployments</h1>
+        <ol className="list">
           {
-            this.props.deployments.map(d => <li key={d.uid} ><Link href={`https://${d.url}`}>{d.name}</Link> <span className={css(styles.date)}>{moment.unix(d.created/1000).fromNow()}</span></li>)
+            this.props.deployments.map(d => <li key={d.uid} ><Link href={`https://${d.url}`}><a>{d.name}</a></Link> <span className="date">{moment.unix(d.created/1000).fromNow()}</span></li>)
           }
         </ol>
+        <style jsx>{`
+          .container {
+            padding: 1em;
+            text-rendering: geometricPrecision;
+          }
+          .title {
+            font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+            font-size: 30px;
+            font-weight: 200;
+            line-height: 40px;
+          }
+          .list {
+            width: 50%;
+            font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+            font-size: 12px;
+            line-height: 18px;
+          }
+          .list a {
+            color: #067df7;
+            text-decoration: none;
+          }
+          .list a:hover {
+            text-decoration: underline;
+          }
+          .date {
+            color: #5c5c5c;
+            float: right;
+          }
+          @media screen and (max-width: 600px) {
+            .list{
+              width: inherit;
+            }
+          }
+        `}</style>
       </div>
     );
   }
 }
-
-const styles = {
-  container: {
-    padding: '1em',
-    textRendering: 'geometricPrecision'
-  },
-  title: {
-    fontFamily: '-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif',
-    fontSize: '30px',
-    fontWeight: 200,
-    lineHeight: '40px'
-  },
-  list: {
-    width: '50%',
-    fontFamily: 'Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif',
-    fontSize: '12px',
-    lineHeight: '18px',
-    '@media screen and (max-width: 600px)': {
-      width: 'inherit'
-    },
-    ' a': {
-      color: '#067df7',
-      textDecoration: 'none',
-      ":hover": {
-        textDecoration: 'underline'
-      }
-    }
-  },
-  date: {
-    color: '#5c5c5c',
-    float: 'right'
-  }
-};
 
 export default Index;
