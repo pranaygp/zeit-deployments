@@ -1,5 +1,5 @@
 # Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
-version: v1.7.1
+version: v1.12.0
 ignore: {}
 # patches apply the minimum changes required to fix a vulnerability
 patch:
@@ -8,3 +8,12 @@ patch:
         patched: '2017-05-21T19:05:26.632Z'
     - next > send > debug > ms:
         patched: '2017-05-21T19:05:26.632Z'
+  'npm:hoek:20180212':
+    - next > glob-promise > codeclimate-test-reporter > request > hawk > hoek:
+        patched: '2018-06-24T01:09:30.253Z'
+    - next > glob-promise > codeclimate-test-reporter > request > hawk > boom > hoek:
+        patched: '2018-06-24T01:09:30.253Z'
+    - next > glob-promise > codeclimate-test-reporter > request > hawk > sntp > hoek:
+        patched: '2018-06-24T01:09:30.253Z'
+    - next > glob-promise > codeclimate-test-reporter > request > hawk > cryptiles > boom > hoek:
+        patched: '2018-06-24T01:09:30.253Z'
