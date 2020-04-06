@@ -1,3 +1,8 @@
+
+## Deprecation Notice
+
+This project was built for Now 1 which is soon to be deprecated. ZEIT now provides a powerful dashboard at https://zeit.co that does plenty more than just listing your deployments
+
 # ▲ZEIT deployments
 
 A little webserver and frontend to list all your ▲ZEIT now deployments easily.
